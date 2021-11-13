@@ -1,3 +1,5 @@
+![Tests](https://github.com/shaunrs/python-hookup/actions/workflows/tests.yml/badge.svg)
+
 Hookup is a Python decorator to monitor one or more attributes on a given object, and trigger a callback function to be called when the attribute(s) value changes.
 
 Example:
