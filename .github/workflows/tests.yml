@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Setup dev environment
+        run: make venv
+
+      - name: Run code linters
+        run: make lint
+
+      - name: Run tests
+        run: make test

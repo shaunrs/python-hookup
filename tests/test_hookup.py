@@ -1,12 +1,9 @@
-import pytest
-
-
 class TestHookup:
     def test_import_lowercase(self):
         """
         Hookup supports importing by name Hookup or lowercase hookup
         """
-        from hookup import hookup
+        from hookup import hookup  # noqa: F401
 
     def test_change_target_attribute(self, fixture_hookup_class):
         """
